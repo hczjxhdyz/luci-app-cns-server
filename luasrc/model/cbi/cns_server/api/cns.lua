@@ -128,7 +128,7 @@ local function get_file_info(arch)
     local sub_version = ""
 
     if arch == "x86_64" then
-        file_tree = "64"
+        file_tree = "amd64"
     elseif arch == "aarch64" then
         file_tree = "arm64"
     elseif arch == "ramips" then
@@ -136,7 +136,7 @@ local function get_file_info(arch)
     elseif arch == "ar71xx" then
         file_tree = "mips"
     elseif arch:match("^i[%d]86$") then
-        file_tree = "32"
+        file_tree = "386"
     elseif arch:match("^armv[5-8]") then
         file_tree = "arm"
         sub_version = arch:match("[5-8]")
